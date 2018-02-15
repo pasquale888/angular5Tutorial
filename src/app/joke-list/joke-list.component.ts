@@ -13,17 +13,24 @@ export class JokeListComponent {
     this.jokes = [
       {
         setup: "first element setup",
-        punchline: "first element punchline"
+        punchline: "first element punchline",
+        hide: true
       },
       {
         setup: "second element setup",
-        punchline: "second element punchline"
+        punchline: "second element punchline",
+        hide: false
       },
       {
         setup: "third element setup",
-        punchline: "third element punchline"
+        punchline: "third element punchline",
+        hide: true
       }
     ];
+  }
+
+  toggle(joke){
+    joke.hide = !joke.hide;
   }
 
 }
