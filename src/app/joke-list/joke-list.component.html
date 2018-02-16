@@ -3,7 +3,7 @@
   <p class="card-text" [hidden]="joke.hide">{{joke.punchline}}</p>
   <p class="card-text">{{joke.hide}}</p>
   <a class="btn btn-info"
-    (click)="toggle(joke)">Change hide</a>
+    (click)="joke.toggle()">Change hide</a>
 </div>
 <p>
   joke-list works!

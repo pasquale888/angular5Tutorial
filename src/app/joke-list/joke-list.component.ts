@@ -1,36 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Joke } from './joke';
+
 @Component({
   selector: 'joke-list',
   templateUrl: './joke-list.component.html',
   styleUrls: ['./joke-list.component.css']
 })
+
 export class JokeListComponent {
 
-  jokes: Object[];
+  jokes: Joke[];
 
-  constructor() { 
+  constructor() {
     this.jokes = [
-      {
-        setup: "first element setup",
-        punchline: "first element punchline",
-        hide: true
-      },
-      {
-        setup: "second element setup",
-        punchline: "second element punchline",
-        hide: false
-      },
-      {
-        setup: "third element setup",
-        punchline: "third element punchline",
-        hide: true
-      }
+      new Joke('first element setup', 'first element punchline'),
+      new Joke('second element setup', 'second element punchline'),
+      new Joke('third element setup', 'third element punchline')
     ];
-  }
-
-  toggle(joke){
-    joke.hide = !joke.hide;
   }
 
 }
