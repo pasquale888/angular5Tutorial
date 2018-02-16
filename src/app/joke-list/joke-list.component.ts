@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Joke } from './joke';
 
 @Component({
-  selector: 'joke-list',
+  selector: 'app-joke-list',
   templateUrl: './joke-list.component.html',
   styleUrls: ['./joke-list.component.css']
 })
