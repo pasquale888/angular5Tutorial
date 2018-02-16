@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Joke } from './joke';
 
 @Component({
   selector: 'app-joke',
@@ -8,12 +10,5 @@ import { Component, OnInit } from '@angular/core';
 
 export class JokeComponent {
 
-  setup: string;
-  punchline: string;
-
-  constructor() {
-    this.setup = 'Hi this is setup property';
-    this.punchline = 'Hi this is punchline property';
-  }
-
+  @Input() joke: Joke;
 }

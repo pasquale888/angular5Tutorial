@@ -1,8 +1,7 @@
-<h3>We have two properties:</h3>
-<p>
-  1: {{setup}}<br>
-  2: {{punchline}}
-</p>
-<p>
-  joke works yeah!
-</p>
+<div class="card card-block">
+  <h4 class="card-title">{{joke.setup}}</h4>
+  <p class="card-text" [hidden]="joke.hide">{{joke.punchline}}</p>
+  <p class="card-text">{{joke.hide}}</p>
+  <a class="btn btn-info"
+    (click)="joke.toggle()">Change hide</a>
+</div>
