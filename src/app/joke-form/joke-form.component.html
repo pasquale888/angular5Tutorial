@@ -6,5 +6,6 @@
   <div class="form-group">
       <input type="text" class="form-control" placeholder="Enter the punchline" #punchline>
   </div>
-  <button type="button" class="btn btn-primary" (click)="createJoke(setup.value, punchline.value)">Create</button>
+  <button type="button" class="btn btn-primary" 
+      (click)="createJoke(setup.value, punchline.value); setup.value=null; punchline.value=null">Create</button>
 </div>
