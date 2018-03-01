@@ -10,8 +10,8 @@ export class JokeFormComponent {
 
   @Output() jokeCreated = new EventEmitter<Joke>();
 
-  createJoke() {
-    this.jokeCreated.emit(new Joke("A setup","A punchline"));
+  createJoke(setup:string, punchline:string) {
+    this.jokeCreated.emit(new Joke(setup, punchline));
   }
 
 }
